@@ -1,10 +1,8 @@
+from django.urls import path
+from posts.views import post_view
 
+app_name = "posts"
 
-from importlib.resources import path
-
-
-app_name = 'posts'
-
-urls = [
-    path('post/<slug:id>', )
+urlpatterns = [
+    path("<slug:slug>/", post_view)
 ]
