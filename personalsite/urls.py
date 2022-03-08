@@ -18,6 +18,8 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
+from django.views.generic import TemplateView
+
 from personalsite.views import (
     home_view,
     home_reroute_view,
@@ -25,9 +27,10 @@ from personalsite.views import (
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', home_view, name="home"),
-    path('', home_reroute_view, name="blank"),
-    path('posts/', include('posts.urls', namespace='posts'))
+    path('', TemplateView.as_view(template_name='index.html'))
+    # path('home/', home_view, name="home"),
+    # path('', home_reroute_view, name="blank"),
+    # path('posts/', include('posts.urls', namespace='posts'))
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

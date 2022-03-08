@@ -1,6 +1,7 @@
 .node_modules/
 */__pycache__/*
 *.pyc
+reactapp
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
