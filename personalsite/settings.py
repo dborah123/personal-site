@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'posts',
 
     # 3rd part apps
+    'rest_framework'
 
 ]
 
